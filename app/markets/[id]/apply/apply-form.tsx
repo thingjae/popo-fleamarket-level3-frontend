@@ -181,7 +181,7 @@ export function ApplyForm() {
                 min={0}
                 max={50}
                 inputMode="numeric"
-                className={`${inputClass} w-20 py-1 text-right`}
+                className={`${inputClass.replace('w-full', 'w-20')} shrink-0 py-1 text-right`}
                 value={qty[eq.id] ?? 0}
                 onChange={(e) => setQty((q) => ({ ...q, [eq.id]: Math.max(0, Number(e.target.value) || 0) }))}
                 aria-label={`${eq.name} 수량`}
